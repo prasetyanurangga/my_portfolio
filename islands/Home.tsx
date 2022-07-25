@@ -5,9 +5,10 @@ import { useState } from "preact/hooks";
 
 export default function Home() {
 
-  const navGalleryStyle = apply`cursor-pointer text-small mt-3 mx-2`
+  const navGalleryStyle = apply`cursor-pointer text-small p-3 mx-2`
 
-  const [indexNavGallery, setIndexNavGallery] = useState(2);
+  const [indexNavGallery, setIndexNavGallery] = useState(0);
+  const [isShown, setIsShown] = useState(false);
 
   const activeNavgallery = (index) => {
     if(indexNavGallery === index) {
@@ -16,6 +17,10 @@ export default function Home() {
       return apply`hover:border(b-2 gray-300)`
     }
   }
+
+  const itemNavGallery = [ "All", "Web", "Mobile" ," Other" ]
+
+
 
   return (
     <main>
@@ -36,21 +41,44 @@ export default function Home() {
             </div>
 
             <div>
-              <span  
-                class={tw`${navGalleryStyle} ${activeNavgallery(0)}`} 
-                onClick={() => setIndexNavGallery(0)}
-              >All</span >
-              <span  class={tw`${navGalleryStyle} ${activeNavgallery(1)}`} onClick={() => setIndexNavGallery(1)}>Web</span >
-              <span  class={tw`${navGalleryStyle} ${activeNavgallery(2)}`} onClick={() => setIndexNavGallery(2)}>Mobile</span >
-              <span  class={tw`${navGalleryStyle} ${activeNavgallery(3)}`} onClick={() => setIndexNavGallery(3)}>Other</span >
+              {
+                itemNavGallery.map((item, index) => <span  class={tw`${navGalleryStyle} ${activeNavgallery(index)}`} onClick={() => setIndexNavGallery(index)}>{item}</span >)
+              }
             </div>
           </div>
 
-          <div class={tw`grid grid-cols-4 gap-4 mt-3`}>
-            <div class={tw`border-rounded shadow-md h-80 relative`} >
-             <img class={tw`h-full w-full object-cover absolute`} src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg"/>
-             
-             <div class={tw`h-full w-full bg-purple-400 absolute`}></div>
+          <div class={tw`grid grid-cols-4 gap-4 mt-6`}>
+            <div class={tw`border-rounded shadow-md h-80 relative cursor-pointer`} 
+
+              onMouseEnter={() => setIsShown(true)}
+              onMouseLeave={() => setIsShown(false)}
+            >
+             <img class={tw`h-full w-full object-cover absolute`} src="https://picsum.photos/200/300"/>
+             { isShown &&  <div class={tw`h-full w-full bg-gray-500 bg-opacity-50 absolute`}></div> }
+            </div>
+            <div class={tw`border-rounded shadow-md h-80 relative cursor-pointer`} 
+
+              onMouseEnter={() => setIsShown(true)}
+              onMouseLeave={() => setIsShown(false)}
+            >
+             <img class={tw`h-full w-full object-cover absolute`} src="https://picsum.photos/200/300"/>
+             { isShown &&  <div class={tw`h-full w-full bg-gray-500 bg-opacity-50 absolute`}></div> }
+            </div>
+            <div class={tw`border-rounded shadow-md h-80 relative cursor-pointer`} 
+
+              onMouseEnter={() => setIsShown(true)}
+              onMouseLeave={() => setIsShown(false)}
+            >
+             <img class={tw`h-full w-full object-cover absolute`} src="https://picsum.photos/200/300"/>
+             { isShown &&  <div class={tw`h-full w-full bg-gray-500 bg-opacity-50 absolute`}></div> }
+            </div>
+            <div class={tw`border-rounded shadow-md h-80 relative cursor-pointer`} 
+
+              onMouseEnter={() => setIsShown(true)}
+              onMouseLeave={() => setIsShown(false)}
+            >
+             <img class={tw`h-full w-full object-cover absolute`} src="https://picsum.photos/200/300"/>
+             { isShown &&  <div class={tw`h-full w-full bg-gray-500 bg-opacity-50 absolute`}></div> }
             </div>
           </div>
         </div>
