@@ -31,7 +31,7 @@ export default function Home() {
           <span class={tw`text-small mt-3`}>Mobile & Web Developer</span>
         </div>
 
-        <div class={tw`min-h-screen p-5 bg-slate-100`}>
+        <div class={tw`min-h-screen p-8 bg-slate-100`}>
           <div class={tw`flex-row flex justify-between items-center`} >
             <div>
               <h1 class={tw`tracking-tight font-normal`}>
