@@ -1,0 +1,103 @@
+/** @jsx h */
+/** @jsxFrag Fragment */
+import { h, Fragment } from "preact";
+import { tw, apply, theme } from "@twind";
+import { useState } from "preact/hooks";
+import ItemGallery from "../components/ItemGallery.tsx";
+
+export default function Gallery() {
+
+  const navGalleryStyle = apply`cursor-pointer text-small p-3 mx-2  transition ease-in-out  duration-150`
+
+  const [indexNavGallery, setIndexNavGallery] = useState(0);
+  const [isShown, setIsShown] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [indexGalleryHover, setIndexGalleryHover] = useState(null);
+
+  const activeNavgallery = (index) => {
+    if(indexNavGallery === index) {
+      return apply`border(b-2 black)`
+    } else {
+      return apply`hover:border(b-2 gray-300)`
+    }
+  }
+
+  const itemNavGallery = [ "All", "Web", "Mobile" ," Other" ]
+  const itemGallery = [
+    {
+      id : "todo",
+      title : "Todo",
+      type : "Web"
+    },
+    {
+      id : "todo",
+      title : "Todo",
+      type : "Mobile"
+    },
+    {
+      id : "todo",
+      title : "Todo",
+      type : "Mobile"
+    },
+    {
+      id : "todo",
+      title : "Todo",
+      type : "Mobile"
+    },
+    {
+      id : "todo",
+      title : "Todo",
+      type : "All"
+    },
+    {
+      id : "todo",
+      title : "Todo",
+      type : "Other"
+    }
+  ]
+
+  const currentItemGallery = itemGallery.filter((item) => (item.type === itemNavGallery[indexNavGallery] || (itemNavGallery[indexNavGallery] === "All" && itemNavGallery.includes(item.type))))
+
+  const handleChangeNavItemGallery = async (index: number) => {
+    setLoading(true)
+    await new Promise(f => setTimeout(f, 150));
+    setIndexNavGallery(index)
+    await new Promise(f => setTimeout(f, 150));
+    setLoading(false)
+  }
+
+  return (
+    
+
+    <>
+
+        <div class={tw`flex-row flex justify-between items-center`} >
+          <div>
+            <h1 class={tw`tracking-tight font-normal`}>
+              <span class={tw`text-4xl`}>Weekend Project</span>
+            </h1>
+            <span class={tw`text-small mt-3`}>some open projects that I have made</span>
+          </div>
+
+          <div>
+            {
+              itemNavGallery.map((item, index) => <span  class={tw`${navGalleryStyle} ${activeNavgallery(index)}`} onClick={() => handleChangeNavItemGallery(index)}>{item}</span >)
+            }
+          </div>
+        </div>
+
+        <div class={tw`grid grid-cols-4 gap-4 mt-6 transition 
+              ease-in-out
+              duration-150 ${ !loading ? 'opacity-100' : 'opacity-0'  }`}>
+          {
+            currentItemGallery.map((item, indexGallery) => <ItemGallery 
+              title={item.title} 
+              id={indexGallery} 
+              type={item.type}
+            />)
+          }
+        </div>
+    </>
+
+  );
+}
