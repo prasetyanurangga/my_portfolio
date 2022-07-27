@@ -71,7 +71,7 @@ export default function Gallery() {
 
     <>
 
-        <div class={tw`flex-row flex justify-between items-center`} >
+        <div class={tw`flex xs:flex-col md:flex-col lg:flex-row justify-between items-center mb-6`} >
           <div>
             <h1 class={tw`tracking-tight font-normal`}>
               <span class={tw`text-4xl`}>Weekend Project</span>
@@ -79,14 +79,14 @@ export default function Gallery() {
             <span class={tw`text-small mt-3`}>some open projects that I have made</span>
           </div>
 
-          <div>
+          <div class={tw`xs:mt-4 lg:mt-0 flex-row flex`} >
             {
-              itemNavGallery.map((item, index) => <span  class={tw`${navGalleryStyle} ${activeNavgallery(index)}`} onClick={() => handleChangeNavItemGallery(index)}>{item}</span >)
+              itemNavGallery.map((item, index) => <div  class={tw`${navGalleryStyle} ${activeNavgallery(index)}`} onClick={() => handleChangeNavItemGallery(index)}>{item}</div >)
             }
           </div>
         </div>
 
-        <div class={tw`grid grid-cols-4 gap-4 mt-6 transition 
+        <div class={tw`grid xs:grid-cols-1  md:grid-cols-2 lg:grid-cols-4  gap-4 mt-6 transition 
               ease-in-out
               duration-150 ${ !loading ? 'opacity-100' : 'opacity-0'  }`}>
           {
