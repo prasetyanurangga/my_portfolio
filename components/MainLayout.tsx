@@ -15,7 +15,9 @@ export default function MainLayout(props: HeaderProps) {
 				<Head>
 	        <title>My Portfolio</title>
 	      </Head>
-				{ props.children }
+      	<main >
+					{ props.children }
+      	</main>
 				<footer class={tw`flex justify-between items-center p-8 w-full`}>
 					<div class={tw`flex flex-col`}>
 						<span>© Copyright MyPortfolio. All Rights Reserved</span>
