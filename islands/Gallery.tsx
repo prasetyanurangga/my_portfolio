@@ -86,7 +86,7 @@ export default function Gallery() {
           </div>
         </div>
 
-        <div class={tw`grid xs:grid-cols-1  md:grid-cols-2 lg:grid-cols-4  gap-4 mt-6 transition 
+        <div class={tw`grid xs:grid-cols-1  md:grid-cols-2 lg:grid-cols-4  gap-8 mt-6 transition 
               ease-in-out
               duration-150 ${ !loading ? 'opacity-100' : 'opacity-0'  }`}>
           {
