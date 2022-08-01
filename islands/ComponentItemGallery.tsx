@@ -3,13 +3,13 @@ import { h } from "preact";
 import { tw, apply, theme } from "@twind";
 import { useState } from "preact/hooks";
 
-interface CounterProps {
+interface ItemGalleryProps {
   id: string;
   title: string;
   type: string;
 }
 
-export default function ItemGallery(props: CounterProps) {
+export default function ComponentItemGallery(props: ItemGalleryProps) {
 
 	const [ isHover, setIsHover ] = useState(false)
 

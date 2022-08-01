@@ -3,22 +3,25 @@
 import { ComponentChildren, Fragment, h } from "preact";
 import { tw, apply, theme } from "@twind";
 import { Head } from "$fresh/runtime.ts";
+import ComponentNavOverlay from "../islands/ComponentNavOverlay.tsx";
 
 interface HeaderProps {
   children: ComponentChildren;
+  hasMarginTop: bool,
+  currentMenu : String
 }
 
-export default function MainLayout(props: HeaderProps) {
+export default function MainLayout({ children, hasMarginTop = true, currentMenu }: HeaderProps) {
 	return (
 		<>	
-
 				<Head>
 	        <title>My Portfolio</title>
 	      </Head>
-      	<main >
-					{ props.children }
+      	<main class={tw`min-h-screen ${hasMarginTop && ' mt-24'}`} >
+      		<ComponentNavOverlay currentMenu={currentMenu}/>
+					{ children }
       	</main>
-				<footer class={tw`flex justify-between items-center p-8 w-full`}>
+				<footer class={tw`flex justify-between items-center py-8 px-16 w-full`}>
 					<div class={tw`flex flex-col`}>
 						<span>© Copyright MyPortfolio. All Rights Reserved</span>
 						<span>Made With ❤ by <a class={tw`font-bold`} href="https://www.linkedin.com/in/angga-nur-prasetya-936687180/" target="_blank">Angga</a> | Made With <a class={tw`font-bold`} href="https://fresh.deno.dev/" target="_blank">Fresh 🍋</a></span>

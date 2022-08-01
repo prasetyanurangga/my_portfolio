@@ -3,9 +3,9 @@
 import { h, Fragment } from "preact";
 import { tw, apply, theme } from "@twind";
 import { useState } from "preact/hooks";
-import ItemGallery from "../components/ItemGallery.tsx";
+import ComponentItemGallery from "./ComponentItemGallery.tsx";
 
-export default function Gallery() {
+export default function SectionGallery() {
 
   const navGalleryStyle = apply`cursor-pointer text-small p-3 mx-2  transition ease-in-out  duration-150`
 
@@ -67,10 +67,8 @@ export default function Gallery() {
   }
 
   return (
-    
-
     <>
-
+      <div class={tw`min-h-screen mt-10 py-8 px-16`}>
         <div class={tw`flex xs:flex-col md:flex-col lg:flex-row justify-between items-center mb-6`} >
           <div>
             <h1 class={tw`tracking-tight font-normal`}>
@@ -90,13 +88,16 @@ export default function Gallery() {
               ease-in-out
               duration-150 ${ !loading ? 'opacity-100' : 'opacity-0'  }`}>
           {
-            currentItemGallery.map((item, indexGallery) => <ItemGallery 
-              title={item.title} 
-              id={indexGallery} 
-              type={item.type}
-            />)
+            currentItemGallery.map((item, indexGallery) => 
+              <ComponentItemGallery 
+                title={item.title} 
+                id={indexGallery} 
+                type={item.type}
+              />
+            )
           }
         </div>
+      </div>
     </>
 
   );
