@@ -29,7 +29,7 @@ export default function ComponentNavOverlay(props: NavOverlayProps) {
 
 	return (
 		<>
-			<div class={tw`fixed top-0 z-10 w-full px-16  bg-white`}>
+			<div class={tw`fixed top-0 z-10 w-full  xs:px-8 lg:px-16  bg-white`}>
 				<div class={tw`flex justify-between items-center h-24`}>
 					<span class={tw`text-small`}>MyPortfolio</span>
 						<svg onClick={() => setShowMenu(true)} class={tw`lg:hidden cursor-pointer w-8 h-8`} xmlns="http://www.w3.org/2000/svg"  fill="currentColor"  viewBox="0 0 16 16">
@@ -38,7 +38,7 @@ export default function ComponentNavOverlay(props: NavOverlayProps) {
 		        <div class={tw`hidden lg:flex justify-between items-center flex-row`}>
 		        	{
 		        		navItem.map((item) => 
-		        			<a href={"/"+item.path} class={tw`cursor-pointer text-small py-1 mx-2 transition ease-in-out duration-150 ${props.currentMenu === item.text ? 'border(b-1 black)' : 'hover:border(b-1 gray-300)'}`}>{item.text}</a>
+		        			<a href={"/"+item.path} class={tw`cursor-pointer text-small py-1 mx-2 transition ease-in-out duration-150 ${props.currentMenu === item.text ? 'border(b-1 black)' : 'border(b-1 transparent) hover:border(b-1 gray-300)'}`}>{item.text}</a>
 		        		)
 		        	}
 		        </div>

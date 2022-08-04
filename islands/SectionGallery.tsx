@@ -5,7 +5,12 @@ import { tw, apply, theme } from "@twind";
 import { useState } from "preact/hooks";
 import ComponentItemGallery from "./ComponentItemGallery.tsx";
 
-export default function SectionGallery() {
+interface GalleryProps {
+  itemsGallery: any
+  typeProject : string
+}
+
+export default function SectionGallery({itemsGallery, typeProject}: GalleryProps) {
 
   const navGalleryStyle = apply`cursor-pointer text-small p-3 mx-2  transition ease-in-out  duration-150`
 
@@ -23,40 +28,8 @@ export default function SectionGallery() {
   }
 
   const itemNavGallery = [ "All", "Web", "Mobile" ," Other" ]
-  const itemGallery = [
-    {
-      id : "todo",
-      title : "Todo",
-      type : "Web"
-    },
-    {
-      id : "todo",
-      title : "Todo",
-      type : "Mobile"
-    },
-    {
-      id : "todo",
-      title : "Todo",
-      type : "Mobile"
-    },
-    {
-      id : "todo",
-      title : "Todo",
-      type : "Mobile"
-    },
-    {
-      id : "todo",
-      title : "Todo",
-      type : "All"
-    },
-    {
-      id : "todo",
-      title : "Todo",
-      type : "Other"
-    }
-  ]
 
-  const currentItemGallery = itemGallery.filter((item) => (item.type === itemNavGallery[indexNavGallery] || (itemNavGallery[indexNavGallery] === "All" && itemNavGallery.includes(item.type))))
+  const currentItemGallery = itemsGallery.filter((item) => (item.type === itemNavGallery[indexNavGallery] || (itemNavGallery[indexNavGallery] === "All" && itemNavGallery.includes(item.type))))
 
   const handleChangeNavItemGallery = async (index: number) => {
     setLoading(true)
@@ -68,7 +41,7 @@ export default function SectionGallery() {
 
   return (
     <>
-      <div class={tw`min-h-screen mt-10 py-8 px-16`}>
+      <div class={tw`min-h-screen mt-10 py-8  xs:px-8 lg:px-16`}>
         <div class={tw`flex xs:flex-col md:flex-col lg:flex-row justify-between items-center mb-6`} >
           <div>
             <h1 class={tw`tracking-tight font-normal`}>
@@ -90,9 +63,11 @@ export default function SectionGallery() {
           {
             currentItemGallery.map((item, indexGallery) => 
               <ComponentItemGallery 
-                title={item.title} 
-                id={indexGallery} 
+                title={item.name} 
+                id={item.name_git} 
                 type={item.type}
+                imageUrl={item.thumb_photo}
+                typeProject={typeProject}
               />
             )
           }

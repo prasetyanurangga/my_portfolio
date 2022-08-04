@@ -2,11 +2,14 @@
 import { h } from "preact";
 import { tw, apply, theme } from "@twind";
 import { useState } from "preact/hooks";
+import { asset } from "$fresh/runtime.ts";
 
 interface ItemGalleryProps {
   id: string;
   title: string;
   type: string;
+  imageUrl: string;
+  typeProject: string
 }
 
 export default function ComponentItemGallery(props: ItemGalleryProps) {
@@ -24,7 +27,7 @@ export default function ComponentItemGallery(props: ItemGalleryProps) {
 	        <img class={tw`h-full w-full object-cover transition 
 	              ease-in-out 
 	              delay-150 
-	              duration-300  absolute ${ isHover && 'filter blur-lg' } `} src="https://picsum.photos/200/300"/>
+	              duration-300  absolute ${ isHover && 'filter blur-lg' } `} src={asset(props.imageUrl)}/>
 	        <div class={tw`
 	              h-full 
 	              p-4
@@ -42,7 +45,7 @@ export default function ComponentItemGallery(props: ItemGalleryProps) {
 	              flex-col`}>
 	           <span class={tw`text-2xl font-bold text-white break-words text-center w-full`}>{props.title}</span>
 	           <span class={tw`text-xl font-light text-white`}>{props.type}</span>
-	           <a class={tw`inline-flex transition ease-in-out duration-100 cursor-pointer justify-center text-sm text-white py-2 px-3 mt-4 border(1 white) hover:(border(1 transparent) bg-white text-black)`} href={`/${props.id}`} target="_blank" >Details →</a>
+	           <a class={tw`inline-flex transition ease-in-out duration-100 cursor-pointer justify-center text-sm text-white py-2 px-3 mt-4 border(1 white) hover:(border(1 transparent) bg-white text-black)`} href={`/detail_${props.typeProject}/${props.id}`} target="_blank" >Details →</a>
 	        </div>
         </div>
 	)

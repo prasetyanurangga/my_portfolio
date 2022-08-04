@@ -21,10 +21,10 @@ export default function MainLayout({ children, hasMarginTop = true, currentMenu 
       		<ComponentNavOverlay currentMenu={currentMenu}/>
 					{ children }
       	</main>
-				<footer class={tw`flex justify-between items-center py-8 px-16 w-full`}>
+				<footer class={tw`flex lg:justify-between lg:flex-row xs:flex-col xs:justify-center items-center py-8  xs:px-8 lg:px-16 w-full`}>
 					<div class={tw`flex flex-col`}>
-						<span>© Copyright MyPortfolio. All Rights Reserved</span>
-						<span>Made With ❤ by <a class={tw`font-bold`} href="https://www.linkedin.com/in/angga-nur-prasetya-936687180/" target="_blank">Angga</a> | Made With <a class={tw`font-bold`} href="https://fresh.deno.dev/" target="_blank">Fresh 🍋</a></span>
+						<span class={tw`lg:text-start xs:(text-center mb-2)`}>© Copyright MyPortfolio. All Rights Reserved</span>
+						<span class={tw`lg:text-start xs:(text-center mb-2)`}>Made With ❤ by <a class={tw`font-bold`} href="https://www.linkedin.com/in/angga-nur-prasetya-936687180/" target="_blank">Angga</a> | Made With <a class={tw`font-bold`} href="https://fresh.deno.dev/" target="_blank">Fresh 🍋</a></span>
 					</div>
 					<div class={tw`flex flex-row`}>
 						<div class={tw`mr-2`}>
