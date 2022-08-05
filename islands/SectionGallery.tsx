@@ -46,8 +46,8 @@ export default function SectionGallery({itemsGallery, typeProject, title, subTit
       <div class={tw`min-h-screen mt-10 py-8  xs:px-8 lg:px-16`}>
         <div class={tw`flex xs:flex-col md:flex-col lg:flex-row justify-between items-center mb-6`} >
           <div>
-            <h1 class={tw`tracking-tight font-normal`}>
-              <span class={tw`text-4xl`}>{title}</span>
+            <h1 class={tw`tracking-tight font-normal lg:text-left xs:text-center`}>
+              <span class={tw`text-4xl lg:text-left xs:text-center`}>{title}</span>
             </h1>
             <span class={tw`text-small mt-3`}>{subTitle}</span>
           </div>
