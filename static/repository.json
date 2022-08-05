@@ -78,7 +78,7 @@
 			"type" : "Other",
 			"language" : [{
 				"name" : "Go",
-				"color" : "#00add8",
+				"color" : "#000000",
 				"value" : "100"
 			}],
 			"main_photo" : "/img/quran_go.png",
