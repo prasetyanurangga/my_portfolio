@@ -13,10 +13,10 @@ export default function ComponentFormContact(props: FormContactProps) {
 
 	const [subject, setSubject] = useState("");
 	const [name, setName] = useState("");
-	const [Message, setMessage] = useState("");
+	const [message, setMessage] = useState("");
 
 	const handleSendEmail = () => {
-		window.open(`mailto:${props.email}?subject=${subject}-${name}&body=${Message}`)
+		window.open(`mailto:${props.email}?subject=${subject}-${name}&body=${message}`)
 	}
 
 	return (
@@ -31,7 +31,7 @@ export default function ComponentFormContact(props: FormContactProps) {
               id="name"
               class={tw`focus:bg-gray-200 block w-full bg-gray-100 sm:text-sm) px-3 py-2`}
               placeholder="Angga"
-              onChange={(text) => setName(text)}
+              onChange={(event) => setName(event.target.value)}
             />
         </div>
         <div class={tw`mb-4`}>
@@ -44,7 +44,7 @@ export default function ComponentFormContact(props: FormContactProps) {
               id="subject"
               class={tw`focus:bg-gray-200 block w-full bg-gray-100 sm:text-sm) px-3 py-2`}
               placeholder="Subject"
-              onChange={(text) => setSubject(text)}
+              onChange={(event) => setSubject(event.target.value)}
             />
         </div>
         <div class={tw`mb-4`}>
@@ -57,7 +57,7 @@ export default function ComponentFormContact(props: FormContactProps) {
             id="message"
             class={tw`focus:bg-gray-200 block w-full bg-gray-100 sm:text-sm) px-3 py-2`}
             placeholder="Type Message ..."
-            onChange={(text) => Message(text)}
+            onChange={(event) => setMessage(event.target.value)}
           />
         </div>
         <button class={tw`mt-4 inline-flex transition ease-in-out duration-100 cursor-pointer justify-center text-sm py-2 px-3 mt-4 font-bold text-black border(1 black) hover:(border(1 transparent) bg-black text-white)`} onClick={handleSendEmail}>Send Message</button>
