@@ -20,7 +20,6 @@ export default function ComponentTabImage({listImage}: tabImageProps) {
             <div class={tw`grid grid-cols-4 gap-6`} aria-orientation="horizontal" role="tablist">
               {listImage.map((item, index) => 
               	<button onClick={() => {
-              		console.log(index)
               		setIndexImage(index)
               	}} class={tw`relative h-24 bg-white rounded-md flex items-center justify-center text-sm font-medium uppercase text-gray-900 cursor-pointer hover:bg-gray-50 ${indexImage === index && 'outline-none ring ring-offset-4 ring-opacity-50'}`} type="button">
 	                <span class={tw`absolute inset-0 rounded-md overflow-hidden`}>

@@ -20,8 +20,6 @@ import { tw } from "@twind";
 
 
 export default function Index({data}: PageProps<ResponPortfolioProject>) {
-
-  console.log(data)
   
   return (
     <MainLayout hasMarginTop={false} currentMenu="Home">
