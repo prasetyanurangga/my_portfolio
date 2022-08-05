@@ -127,10 +127,10 @@ export default function Detail({ data }: PageProps<ResponPortfolioProject | null
 
 
             </div>
-            <div class={tw`flex lg:flex-row xs:flex-col space-x-4`}>
+            <div class={tw`flex lg:flex-row xs:flex-col lg:space-x-4`}>
               
-              { data.github_url && <a class={tw`mt-4 inline-flex w-48 transition ease-in-out duration-100 cursor-pointer justify-center text-sm py-2 px-3 mt-4 font-bold text-black border(1 black) hover:(border(1 transparent) bg-black text-white)`} href={data.github_url} target="_blank" >More Information</a> }
-              { data.live_url && <a class={tw`mt-4 inline-flex w-48 transition ease-in-out duration-100 cursor-pointer justify-center text-sm py-2 px-3 mt-4 font-bold text-black border(1 black) hover:(border(1 transparent) bg-black text-white)`} href={data.live_url} target="_blank" >Live Demo</a> }
+              { data.github_url && <a class={tw`mt-4 inline-flex lg:w-48 xs:w-full transition ease-in-out duration-100 cursor-pointer justify-center text-sm py-2 px-3 mt-4 font-bold text-black border(1 black) hover:(border(1 transparent) bg-black text-white)`} href={data.github_url} target="_blank" >More Information</a> }
+              { data.live_url && <a class={tw`mt-4 inline-flex lg:w-48 xs:w-full transition ease-in-out duration-100 cursor-pointer justify-center text-sm py-2 px-3 mt-4 font-bold text-black border(1 black) hover:(border(1 transparent) bg-black text-white)`} href={data.live_url} target="_blank" >Live Demo</a> }
 
             </div>
           </div>
