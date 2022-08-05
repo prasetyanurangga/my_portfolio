@@ -44,7 +44,7 @@ export default function Contact() {
 
             <div class={tw`flex flex-col lg:w-80 my-3`}>
               <span class={tw`text-lg font-bold text-black`}>Email</span>
-              <span class={tw`text-md font-normal text-black`}>{contact.email}</span>
+              <a href="mailto:angganurprasetya4@gmail.com" class={tw`text-md font-normal text-black`}>{contact.email}</a>
             </div>
           </div>
         </div>
