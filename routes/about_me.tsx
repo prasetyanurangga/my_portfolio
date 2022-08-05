@@ -34,7 +34,7 @@ export default function AboutMe() {
         
         <div class={tw`flex lg:flex-row xs:flex-col justify-around lg:space-x-16`}>
           <div class={tw`lg:(w-1/2 mb-0) xs:mb-5`}>
-            <img alt="Image" class="img-fluid" src={profile.avatar_url}/>
+            <img alt="Image" class="img-fluid" src={profile.avatar_url} data-fresh-disable-lock/>
             <p class={tw` break-word text-md font-normal text-black mt-5`}>{profile.description}</p>
             <a class={tw`mt-4 inline-flex transition ease-in-out duration-100 cursor-pointer justify-center text-sm py-2 px-3 mt-4 font-bold text-black border(1 black) hover:(border(1 transparent) bg-black text-white)`} href={profile.url_cv} target="_blank" >Download Resume</a>
           </div>
