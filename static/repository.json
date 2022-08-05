@@ -1,7 +1,7 @@
 {
 	"open_project" : [
 		{
-			"name_git" : "panda",
+			"id" : "panda",
 			"name" : "Panda",
 			"type" : "Mobile",
 			"language" : [{
@@ -13,7 +13,7 @@
 			"thumb_photo" : "/img/panda_thumbnail.png"
 		},
 		{
-			"name_git" : "todo",
+			"id" : "todo",
 			"name" : "Todo",
 			"type" : "Mobile",
 			"language" : [{
@@ -25,7 +25,7 @@
 			"thumb_photo" : "/img/todo_thumbnail.png"
 		},
 		{
-			"name_git" : "hava",
+			"id" : "hava",
 			"name" : "Hava",
 			"type" : "Mobile",
 			"language" : [{
@@ -37,7 +37,7 @@
 			"thumb_photo" : "/img/hava_app_ui.png"
 		},
 		{
-			"name_git" : "qtz",
+			"id" : "qtz",
 			"name" : "QTZ",
 			"type" : "Mobile",
 			"language" : [{
@@ -49,7 +49,7 @@
 			"thumb_photo" : "/img/qtz_app_ui.png"
 		},
 		{
-			"name_git" : "ipod",
+			"id" : "ipod",
 			"name" : "Ipod",
 			"type" : "Mobile",
 			"language" : [{
@@ -61,7 +61,7 @@
 			"thumb_photo" : "/img/ipod.png"
 		},
 		{
-			"name_git" : "minerva",
+			"id" : "minerva",
 			"name" : "Minerva",
 			"type" : "Mobile",
 			"language" : [{
@@ -73,7 +73,7 @@
 			"thumb_photo" : "/img/minerva_app_ui.png"
 		},
 		{
-			"name_git" : "quran_go",
+			"id" : "quran_go",
 			"name" : "Rest API Al Quran",
 			"type" : "Web",
 			"language" : [{
@@ -85,7 +85,7 @@
 			"thumb_photo" : "/img/quran_go.png"
 		},
 		{
-			"name_git" : "wordseeker",
+			"id" : "wordseeker",
 			"name" : "WordSeeker",
 			"type" : "Web",
 			"language" : [{
@@ -97,7 +97,7 @@
 			"thumb_photo" : "/img/wordseeker_ui_puzzle.png"
 		},
 		{
-			"name_git" : "snaptify",
+			"id" : "snaptify",
 			"name" : "Snaptify",
 			"type" : "Web",
 			"language" : [{
@@ -109,7 +109,7 @@
 			"thumb_photo" : "/img/snaptify.png"
 		},
 		{
-			"name_git" : "flagly",
+			"id" : "flagly",
 			"name" : "Flagly",
 			"type" : "Web",
 			"language" : [{
@@ -121,5 +121,39 @@
 			"thumb_photo" : "/img/flagly.png"
 		}
 
-	]
+	],
+	"professional_project": [
+	{
+		"id": "sikebal",
+		"name" : "SiKebal",
+		"client" : "Dinas Kesehatan Kab. Banjarnegara, Jawa Tengah",
+		"type" : "Web",
+		"language" : [{
+			"name" : "PHP",
+			"color" : "#000000",
+			"value" : "50"
+		},{
+			"name" : "HTML",
+			"color" : "#000000",
+			"value" : "20"
+		},{
+			"name" : "CSS",
+			"color" : "#000000",
+			"value" : "10"
+		},{
+			"name" : "JS",
+			"color" : "#000000",
+			"value" : "20"
+		}],
+		"date" : "2021-09-01",
+		"live_url" : "https://sikebal.com",
+		"thumb_photo": "/img/sikebal.png",
+		"photo" : [
+			"/img/sikebal.png",
+			"/img/sikebal_2.png"
+		],
+		"description" : ""
+	}
+
+]
 }

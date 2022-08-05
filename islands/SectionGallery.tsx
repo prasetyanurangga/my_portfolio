@@ -8,9 +8,11 @@ import ComponentItemGallery from "./ComponentItemGallery.tsx";
 interface GalleryProps {
   itemsGallery: any
   typeProject : string
+  title: string,
+  subString: string
 }
 
-export default function SectionGallery({itemsGallery, typeProject}: GalleryProps) {
+export default function SectionGallery({itemsGallery, typeProject, title, subTitle}: GalleryProps) {
 
   const navGalleryStyle = apply`cursor-pointer text-small p-3 mx-2  transition ease-in-out  duration-150`
 
@@ -45,9 +47,9 @@ export default function SectionGallery({itemsGallery, typeProject}: GalleryProps
         <div class={tw`flex xs:flex-col md:flex-col lg:flex-row justify-between items-center mb-6`} >
           <div>
             <h1 class={tw`tracking-tight font-normal`}>
-              <span class={tw`text-4xl`}>Weekend Project</span>
+              <span class={tw`text-4xl`}>{title}</span>
             </h1>
-            <span class={tw`text-small mt-3`}>some open projects that I have made</span>
+            <span class={tw`text-small mt-3`}>{subTitle}</span>
           </div>
 
           <div class={tw`xs:mt-4 lg:mt-0 flex-row flex`} >
@@ -64,7 +66,7 @@ export default function SectionGallery({itemsGallery, typeProject}: GalleryProps
             currentItemGallery.map((item, indexGallery) => 
               <ComponentItemGallery 
                 title={item.name} 
-                id={item.name_git} 
+                id={item.id} 
                 type={item.type}
                 imageUrl={item.thumb_photo}
                 typeProject={typeProject}

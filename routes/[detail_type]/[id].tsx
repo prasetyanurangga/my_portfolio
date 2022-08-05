@@ -1,5 +1,6 @@
 /** @jsx h */
-import { h  } from "preact";
+/** @jsxFrag Fragment */
+import { ComponentChildren, Fragment, h } from "preact";
 import SectionLanding from "../../islands/SectionLanding.tsx";
 import SectionGallery from "../../islands/SectionGallery.tsx";
 import ComponentTabImage from "../../islands/ComponentTabImage.tsx";
@@ -25,12 +26,11 @@ interface ResponPortfolioProject {
       if(ctx.params.detail_type && ctx.params.detail_type === "detail_open_project"){
         const responPortfolioProject = JSON.parse(await Deno.readTextFile("./static/repository.json"));
         const resp = await fetch(`https://api.github.com/repos/prasetyanurangga/${idProject}`);
-        const dataOpenSource = responPortfolioProject.open_project.find((item) => item.name_git === idProject)
+        const dataOpenSource = responPortfolioProject.open_project.find((item) => item.id === idProject)
         const dataResponGithub = await resp.json();
         if (resp.status === 404 || !dataOpenSource) {
           return ctx.render(null);
         }
-        console.log(dataOpenSource)
         const resultOpenSourceProject: ResponPortfolioProject = {
           name: dataOpenSource.name,
           type: dataOpenSource.type,
@@ -42,6 +42,26 @@ interface ResponPortfolioProject {
           live_url: dataResponGithub.homepage
         }
         return ctx.render(resultOpenSourceProject);
+      }
+
+      if(ctx.params.detail_type && ctx.params.detail_type === "detail_professional_project"){
+        const responPortfolioProject = JSON.parse(await Deno.readTextFile("./static/repository.json"));
+        const professionalProject = responPortfolioProject.professional_project
+        const dataProfessionalProject = professionalProject.find((item) => item.id === idProject)
+        if (!dataProfessionalProject || !professionalProject) {
+          return ctx.render(null);
+        }
+        const resultProfessionalProject: ResponPortfolioProject = {
+          name: dataProfessionalProject.name,
+          type: dataProfessionalProject.type,
+          description: dataProfessionalProject.description,
+          date: dataProfessionalProject.date,
+          languages: dataProfessionalProject.language || [],
+          listImage: dataProfessionalProject.photo,
+          github_url: null,
+          live_url: dataProfessionalProject.live_url
+        }
+        return ctx.render(resultProfessionalProject);
       }
 
       return ctx.render(null);
@@ -63,13 +83,6 @@ export default function Detail({ data }: PageProps<ResponPortfolioProject | null
     )
   }
 
-
-  const profile = {
-    desc : 'I am a man who has an interest in programming. My specialization includes quickly learning new skills and programming languages, problem solving, framework and design patterns. so far the skills that I already have include Flutter, Javascript, Nuxt JS, Laravel, PHP, Postgresql, MySql, React Native. I started studying Golang and React JS. I am still enthusiastic about reaching a new programming language, framework, design pattern, and everything about programming'
-  }
-
-  const listImage = ["https://tailwindui.com/img/ecommerce-images/product-page-03-product-01.jpg", "https://tailwindui.com/img/ecommerce-images/product-page-03-product-02.jpg"]
-  
   
   return (
     <MainLayout currentMenu="Home">
@@ -84,8 +97,14 @@ export default function Detail({ data }: PageProps<ResponPortfolioProject | null
             <span class={tw`text-md font-normal text-gray-700`}>{data.type}</span>
              <p class={tw` break-word text-md font-normal text-black my-5`}>{data.description}</p>
 
-            <span class={tw`text-sm font-bold text-black w-full`}>Last Update</span>
-            <span class={tw`text-sm font-normal text-gray-700`}>{moment(data.date).format("DD MMMM YYYY")}</span>
+            {
+              data.date && (
+                <>
+                  <span class={tw`text-sm font-bold text-black w-full`}>Last Update</span>
+                  <span class={tw`text-sm font-normal text-gray-700`}>{moment(data.date).format("DD MMMM YYYY")}</span>
+                </>
+              )
+            }
 
             <div class={tw`flex flex-col my-5 w-full`}>
              <span class={tw`text-md font-normal text-black w-full mb-1`}>Languages</span>
@@ -110,7 +129,7 @@ export default function Detail({ data }: PageProps<ResponPortfolioProject | null
             </div>
             <div class={tw`flex lg:flex-row xs:flex-col space-x-4`}>
               
-               <a class={tw`mt-4 inline-flex w-48 transition ease-in-out duration-100 cursor-pointer justify-center text-sm py-2 px-3 mt-4 font-bold text-black border(1 black) hover:(border(1 transparent) bg-black text-white)`} href={data.github_url} target="_blank" >More Information</a>
+              { data.github_url && <a class={tw`mt-4 inline-flex w-48 transition ease-in-out duration-100 cursor-pointer justify-center text-sm py-2 px-3 mt-4 font-bold text-black border(1 black) hover:(border(1 transparent) bg-black text-white)`} href={data.github_url} target="_blank" >More Information</a> }
               { data.live_url && <a class={tw`mt-4 inline-flex w-48 transition ease-in-out duration-100 cursor-pointer justify-center text-sm py-2 px-3 mt-4 font-bold text-black border(1 black) hover:(border(1 transparent) bg-black text-white)`} href={data.live_url} target="_blank" >Live Demo</a> }
 
             </div>

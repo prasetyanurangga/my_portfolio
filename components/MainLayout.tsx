@@ -4,6 +4,7 @@ import { ComponentChildren, Fragment, h } from "preact";
 import { tw, apply, theme } from "@twind";
 import { Head } from "$fresh/runtime.ts";
 import ComponentNavOverlay from "../islands/ComponentNavOverlay.tsx";
+import { asset } from "$fresh/runtime.ts";
 
 interface HeaderProps {
   children: ComponentChildren;
@@ -15,7 +16,8 @@ export default function MainLayout({ children, hasMarginTop = true, currentMenu 
 	return (
 		<>	
 				<Head>
-	        <title>My Portfolio</title>
+	        <title>My Portfolio - Angga</title>
+	        <link rel="icon" href={asset("/img/mp.png")} type="image/x-icon"/>
 	      </Head>
       	<main class={tw`min-h-screen ${hasMarginTop && ' mt-24'}`} >
       		<ComponentNavOverlay currentMenu={currentMenu}/>

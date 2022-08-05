@@ -27,7 +27,7 @@ export default function ComponentItemGallery(props: ItemGalleryProps) {
 	        <img class={tw`h-full w-full object-cover transition 
 	              ease-in-out 
 	              delay-150 
-	              duration-300  absolute ${ isHover && 'filter blur-lg' } `} src={asset(props.imageUrl)}/>
+	              duration-300  absolute ${ isHover && 'filter blur-lg' } `} src={props.imageUrl} data-fresh-disable-lock/>
 	        <div class={tw`
 	              h-full 
 	              p-4

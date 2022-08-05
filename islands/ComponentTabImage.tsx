@@ -24,7 +24,7 @@ export default function ComponentTabImage({listImage}: tabImageProps) {
               		setIndexImage(index)
               	}} class={tw`relative h-24 bg-white rounded-md flex items-center justify-center text-sm font-medium uppercase text-gray-900 cursor-pointer hover:bg-gray-50 ${indexImage === index && 'outline-none ring ring-offset-4 ring-opacity-50'}`} type="button">
 	                <span class={tw`absolute inset-0 rounded-md overflow-hidden`}>
-	                  <img src={asset(item)} alt="" class={tw`w-full h-full object-center object-cover`}/>
+	                  <img src={item} alt="" class={tw`w-full h-full object-center object-cover`} data-fresh-disable-lock/>
 	                </span>
 	                <span class={tw`ring-transparent absolute inset-0 rounded-md ring-2 ring-offset-2 pointer-events-none`} aria-hidden="true"></span>
 	              </button>
@@ -34,7 +34,7 @@ export default function ComponentTabImage({listImage}: tabImageProps) {
 
           <div class={tw`w-full aspect-w-1 aspect-h-1`}>
             <div aria-labelledby="tabs-1-tab-1" role="tabpanel" tabindex="0">
-              <img src={asset(listImage[indexImage])} class={tw`w-full h-full object-center object-cover sm:rounded-lg`}/>
+              <img src={listImage[indexImage]} class={tw`w-full h-full object-center object-cover sm:rounded-lg`} data-fresh-disable-lock/>
             </div>
 
           </div>
