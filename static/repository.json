@@ -75,7 +75,7 @@
 		{
 			"id" : "quran_go",
 			"name" : "Rest API Al Quran",
-			"type" : "Web",
+			"type" : "Other",
 			"language" : [{
 				"name" : "Go",
 				"color" : "#00add8",

@@ -29,7 +29,7 @@ export default function SectionGallery({itemsGallery, typeProject, title, subTit
     }
   }
 
-  const itemNavGallery = [ "All", "Web", "Mobile" ," Other" ]
+  const itemNavGallery = [ "All", "Web", "Mobile" ,"Other" ]
 
   const currentItemGallery = itemsGallery.filter((item) => (item.type === itemNavGallery[indexNavGallery] || (itemNavGallery[indexNavGallery] === "All" && itemNavGallery.includes(item.type))))
 

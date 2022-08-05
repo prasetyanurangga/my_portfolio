@@ -31,7 +31,7 @@ export default function ComponentNavOverlay(props: NavOverlayProps) {
 		<>
 			<div class={tw`fixed top-0 z-10 w-full  xs:px-8 lg:px-16  bg-white`}>
 				<div class={tw`flex justify-between items-center h-24`}>
-					<span class={tw`text-lg font-bold`}>MyPortfolio</span>
+					<a class={tw`text-lg font-bold cursor-pointer`} href="/">MyPortfolio</a>
 						<svg onClick={() => setShowMenu(true)} class={tw`lg:hidden cursor-pointer w-8 h-8`} xmlns="http://www.w3.org/2000/svg"  fill="currentColor"  viewBox="0 0 16 16">
 		            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
 		        </svg>
