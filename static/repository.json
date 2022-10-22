@@ -126,7 +126,11 @@
 	{
 		"id": "sikebal",
 		"name" : "SiKebal",
-		"client" : "Dinas Kesehatan Kab. Banjarnegara, Jawa Tengah",
+
+		"client" : {
+			"name": "Dinas Kesehatan Kab. Banjarnegara, Jawa Tengah",
+			"url" : "https://dinkesbna.banjarnegarakab.go.id"
+		},
 		"type" : "Web",
 		"language" : [{
 			"name" : "PHP",
@@ -153,7 +157,35 @@
 			"/img/sikebal_2.png"
 		],
 		"description" : ""
-	}
+	},
+	{
+		"id": "tandhur",
+		"name" : "Tandhur",
+		"client" : {
+			"name": "Beehive Drones",
+			"url" : "https://beehivedrones.com"
+		},
+		"type" : "Web",
+		"language" : [{
+			"name" : "Next JS",
+			"color" : "#000000",
+			"value" : "80"
+		},{
+			"name" : "Tailwind CSS",
+			"color" : "#000000",
+			"value" : "20"
+		}],
+		"date" : "2022-09-01",
+		"live_url" : "https://tandhur.id",
+		"thumb_photo": "/img/tandhur.png",
+		"photo" : [
+			"/img/tandhur.png",
+			"/img/tandhur-1.png",
+			"/img/tandhur-2.png",
+			"/img/tandhur-3.png"
+		],
+		"description" : "Tandhur adalah sistem pengelolaan sektor pertanian berbasis web. Fitur utama tandhur adalah untuk mendata Petani, jenis tanaman, lokasi lahan petani, luas lahan pertanian, perhitungan finansial pertanian dan estimasi hasil panen."
+	}  
 
 ]
 }

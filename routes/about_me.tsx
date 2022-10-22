@@ -20,7 +20,7 @@ export default function AboutMe() {
     {name : "Flutter", value:"80", color: "#000000"},
     {name : "PHP", value:"80", color: "#000000"},
     {name : "SQL", value:"80", color: "#000000"},
-    {name : "Go", value:"50", color: "#000000"}
+    {name : "Next JS", value:"50", color: "#000000"}
   ]
   
   

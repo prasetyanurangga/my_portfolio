@@ -24,8 +24,9 @@ export default function Index({data}: PageProps<ResponPortfolioProject>) {
   return (
     <MainLayout hasMarginTop={false} currentMenu="Home">
       <SectionLanding />
+      <SectionGallery itemsGallery={data.professional_project} typeProject="professional_project" title="Professional Project" subTitle="some professional projects that I have made"/>
       <SectionGallery itemsGallery={data.open_project} typeProject="open_project" title="Weekend Project" subTitle="some open projects that I have made"/>
-      <SectionGallery itemsGallery={data.professional_project} typeProject="professional_project" title="Project" subTitle="some open projects that I have made"/>
+      
     </MainLayout>
   );
 }

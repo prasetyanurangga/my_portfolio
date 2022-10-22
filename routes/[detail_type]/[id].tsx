@@ -57,6 +57,7 @@ interface ResponPortfolioProject {
           description: dataProfessionalProject.description,
           date: dataProfessionalProject.date,
           languages: dataProfessionalProject.language || [],
+          client : dataProfessionalProject.client,
           listImage: dataProfessionalProject.photo,
           github_url: null,
           live_url: dataProfessionalProject.live_url
@@ -96,7 +97,14 @@ export default function Detail({ data }: PageProps<ResponPortfolioProject | null
             <span class={tw`text-xl font-bold text-black w-full`}>{data.name}</span>
             <span class={tw`text-md font-normal text-gray-700`}>{data.type}</span>
              <p class={tw` break-word text-md font-normal text-black my-5`}>{data.description}</p>
-
+             {
+              data.client && (
+                <div class={tw`my-5 flex flex-col`}>
+                  <span class={tw`text-sm font-bold text-black w-full`}>Client</span>
+                  <a href={ data.client.url } target="_blank" class={tw`hover:text-underline text-sm font-normal text-gray-700`}>{ data.client.name }</a>
+                </div>
+              )
+            }
             {
               data.date && (
                 <>
@@ -107,7 +115,7 @@ export default function Detail({ data }: PageProps<ResponPortfolioProject | null
             }
 
             <div class={tw`flex flex-col my-5 w-full`}>
-             <span class={tw`text-md font-normal text-black w-full mb-1`}>Languages</span>
+             <span class={tw`text-md font-normal text-black w-full mb-1`}>Languages & framework</span>
 
              {
               data.languages.map((itemLanguages) => 
