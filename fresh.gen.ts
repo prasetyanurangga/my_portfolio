@@ -6,13 +6,15 @@ import * as $0 from "./routes/[detail_type]/[id].tsx";
 import * as $1 from "./routes/about_me.tsx";
 import * as $2 from "./routes/api/joke.ts";
 import * as $3 from "./routes/contact.tsx";
-import * as $4 from "./routes/index.tsx";
+import * as $4 from "./routes/hello.tsx";
+import * as $5 from "./routes/index.tsx";
 import * as $$0 from "./islands/ComponentFormContact.tsx";
 import * as $$1 from "./islands/ComponentItemGallery.tsx";
 import * as $$2 from "./islands/ComponentNavOverlay.tsx";
 import * as $$3 from "./islands/ComponentTabImage.tsx";
 import * as $$4 from "./islands/SectionGallery.tsx";
-import * as $$5 from "./islands/SectionLanding.tsx";
+import * as $$5 from "./islands/SectionHello.tsx";
+import * as $$6 from "./islands/SectionLanding.tsx";
 
 const manifest = {
   routes: {
@@ -20,7 +22,8 @@ const manifest = {
     "./routes/about_me.tsx": $1,
     "./routes/api/joke.ts": $2,
     "./routes/contact.tsx": $3,
-    "./routes/index.tsx": $4,
+    "./routes/hello.tsx": $4,
+    "./routes/index.tsx": $5,
   },
   islands: {
     "./islands/ComponentFormContact.tsx": $$0,
@@ -28,7 +31,8 @@ const manifest = {
     "./islands/ComponentNavOverlay.tsx": $$2,
     "./islands/ComponentTabImage.tsx": $$3,
     "./islands/SectionGallery.tsx": $$4,
-    "./islands/SectionLanding.tsx": $$5,
+    "./islands/SectionHello.tsx": $$5,
+    "./islands/SectionLanding.tsx": $$6,
   },
   baseUrl: import.meta.url,
 };

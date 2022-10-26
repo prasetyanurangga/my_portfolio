@@ -2,6 +2,7 @@
 import { h  } from "preact";
 import SectionLanding from "../islands/SectionLanding.tsx";
 import SectionGallery from "../islands/SectionGallery.tsx";
+import SectionHello from "../islands/SectionHello.tsx";
 import MainLayout from "../components/MainLayout.tsx";
 import { Handlers, PageProps } from "$fresh/server.ts";
 import { tw } from "@twind";
