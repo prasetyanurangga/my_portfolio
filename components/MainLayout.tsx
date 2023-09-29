@@ -20,6 +20,7 @@ export default function MainLayout({ children, hasMarginTop = true, currentMenu 
 					<meta content="Angga Nur Prasetya's Portfolio" name="descriptison"/>
   				<meta content="angga,nur,prasetya,angga  nur prasetya,prasetyanurangga,portofolio,web,developer,web developer,mobile,mobile developer,flutter,flutter developer" name="keywords"></meta>
 	        <link rel="icon" href={asset("/img/mp.png")} type="image/x-icon"/>
+					<meta name="google-site-verification" content="8qte7nRwvL-f0zRsdF8FnCU8vNNoqhIKgKWv97gsb6k" />
 	      </Head>
       	<main class={tw`min-h-screen ${hasMarginTop && ' mt-24'}`} >
       		<ComponentNavOverlay currentMenu={currentMenu}/>
