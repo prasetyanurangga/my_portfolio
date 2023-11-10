@@ -21,6 +21,7 @@ export default function AboutMe() {
     { name: "PHP", value: "80", color: "#000000" },
     { name: "SQL", value: "80", color: "#000000" },
     { name: "Next JS", value: "50", color: "#000000" },
+    { name: "React Nativ", value: "60", color: "#000000" },
   ];
 
   return (
