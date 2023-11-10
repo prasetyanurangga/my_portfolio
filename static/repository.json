@@ -1,6 +1,18 @@
 {
 	"open_project" : [
 		{
+			"id" : "fluiric",
+			"name" : "Fluiric",
+			"type" : "Desktop",
+			"language" : [{
+				"name" : "Swift",
+				"color" : "#000000",
+				"value" : "100"
+			}],
+			"main_photo" : "/img/fluiric.png",
+			"thumb_photo" : "/img/fluiric.png"
+		},
+		{
 			"id" : "panda",
 			"name" : "Panda",
 			"type" : "Mobile",
@@ -126,8 +138,8 @@
 	{
 		"id": "sikebal",
 		"name" : "SiKebal",
-
 		"client" : {
+			"type_client": "freelance",
 			"name": "Dinas Kesehatan Kab. Banjarnegara, Jawa Tengah",
 			"url" : "https://dinkesbna.banjarnegarakab.go.id"
 		},
@@ -145,7 +157,7 @@
 			"color" : "#000000",
 			"value" : "10"
 		},{
-			"name" : "JS",
+			"name" : "JS (JQuery)",
 			"color" : "#000000",
 			"value" : "20"
 		}],
@@ -159,9 +171,67 @@
 		"description" : ""
 	},
 	{
+		"id": "pwni",
+		"name" : "Portal Peduli WNI (PWNi)",
+		"client" : {
+			"type_client": "fulltime",
+			"name": "PT Traspac Makmur Sejahtera | Client : Kementerian Luar Negeri",
+			"url" : "https://www.traspac.co.id"
+		},
+		"type" : "Web",
+		"language" : [{
+			"name" : "JS (JQuery)",
+			"color" : "#000000",
+			"value" : "40"
+		},{
+			"name" : "CSS (Bootstrap)",
+			"color" : "#000000",
+			"value" : "20"
+		},{
+			"name" : "PHP ",
+			"color" : "#000000",
+			"value" : "40"
+		}],
+		"date_start" : "Oktober 2019",
+		"date_end" : "Oktober 2022",
+		"live_url" : "https://peduliwni.kemlu.go.id",
+		"thumb_photo": "/img/pwni.png",
+		"photo" : [
+			"/img/pwni.png",
+			"/img/pwni-1.png"
+		],
+		"description" : "Portal Pelayanan dan Pelindungan WNI di Luar Negeri (PEDULI WNI) merupakan sistem yang memfasilitasi pendataan WNI di Luar Negeri melalui fitur lapor diri, serta memudahkan WNI untuk mengajukan layanan baik secara online, maupun booking online untuk datang langsung ke perwakilan, serta memudahkan WNI untuk mengajukan pengaduan secara mandiri langsung melalui aplikasi. Pada project ini saya bertugas sebagai Frontend Developer dan Backend Developer. Tugas saya antara mengatasi bug, menambah fitur, dan meningkatkan UI/UX."
+	} ,
+	{
+		"id": "komcad",
+		"name" : "Komcad",
+		"client" : {
+			"type_client": "fulltime",
+			"name": "PT Traspac Makmur Sejahtera | Client : Kementerian Pertahanan",
+			"url" : "https://www.traspac.co.id"
+		},
+		"type" : "Web",
+		"language" : [{
+			"name" : "Nuxt JS",
+			"color" : "#000000",
+			"value" : "100"
+		}],
+		"date_start" : "Oktober 2023",
+		"date_end" : "Sekarang",
+		"live_url" : "https://komcad.kemhan.go.id",
+		"thumb_photo": "/img/komcad.png",
+		"photo" : [
+			"/img/komcad.png",
+			"/img/komcad-1.png"
+		],
+		"description" : "Web Komcad merupakan website untuk proses rekrutmen personel Komcad (Komponen Cadangan) oleh Kementrian Pertahanan. Pada project ini saya bertugas sebagai Frontend Developer. Tugas saya antara mengatasi bug, menambah fitur, dan meningkatkan UI/UX."
+	} ,
+	
+	{
 		"id": "tandhur",
 		"name" : "Tandhur",
 		"client" : {
+			"type_client": "freelance",
 			"name": "Beehive Drones",
 			"url" : "https://beehivedrones.com"
 		},

@@ -7,12 +7,8 @@
     "preact": "https://esm.sh/preact@10.8.2",
     "preact/": "https://esm.sh/preact@10.8.2/",
     "twind": "https://esm.sh/twind@0.16.17",
-    "twind/": "https://esm.sh/twind@0.16.17/",
-    "@formkit/auto-animate": "https://esm.sh/v96/@formkit/auto-animate@1.0.0-beta.3",
-    "@formkit/auto-animate/": "https://esm.sh/v96/@formkit/auto-animate@1.0.0-beta.3/"
+    "twind/": "https://esm.sh/twind@0.16.17/"
   },
   "scopes": {
-    "@formkit/auto-animate": {},
-    "@formkit/auto-animate/": {}
   }
 }
