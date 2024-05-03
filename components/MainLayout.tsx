@@ -49,6 +49,16 @@ export default function MainLayout({ children, hasMarginTop = true, currentMenu 
 						</div>
 					</div>
 				</footer>
+			<script type="text/javascript">
+	atOptions = {
+		'key' : '05c16cbe87fec0742de26e5eaf722315',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.topcreativeformat.com/05c16cbe87fec0742de26e5eaf722315/invoke.js"></script>
 		</>
 	)
 }
