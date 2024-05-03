@@ -21,6 +21,17 @@ export default function MainLayout({ children, hasMarginTop = true, currentMenu 
   				<meta content="angga,nur,prasetya,angga  nur prasetya,prasetyanurangga,portofolio,web,developer,web developer,mobile,mobile developer,flutter,flutter developer" name="keywords"></meta>
 	        <link rel="icon" href={asset("/img/mp.png")} type="image/x-icon"/>
 					<meta name="google-site-verification" content="8qte7nRwvL-f0zRsdF8FnCU8vNNoqhIKgKWv97gsb6k" />
+					
+			<script type="text/javascript">
+	atOptions = {
+		'key' : '05c16cbe87fec0742de26e5eaf722315',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.topcreativeformat.com/05c16cbe87fec0742de26e5eaf722315/invoke.js"></script>
 	      </Head>
       	<main class={tw`min-h-screen ${hasMarginTop && ' mt-24'}`} >
       		<ComponentNavOverlay currentMenu={currentMenu}/>
