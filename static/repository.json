@@ -135,6 +135,31 @@
 
 	],
 	"professional_project": [
+		
+	{
+		"id": "smartkorlantas",
+		"name" : "Smart Korlantas",
+		"client" : {
+			"type_client": "fulltime",
+			"name": "PT Traspac Makmur Sejahtera",
+			"url" : "https://www.traspac.co.id"
+		},
+		"type" : "Mobile",
+		"language" : [{
+			"name" : "Flutter",
+			"color" : "#000000",
+			"value" : "100"
+		}],
+		"date_start" : "Oktober 2024",
+		"date_end" : "Present",
+		"live_url" : "",
+		"thumb_photo": "/img/smartkorlantas-1.png",
+		"photo" : [
+			"/img/smartkorlantas-1.png",
+			"/img/smartkorlantas-2.png"
+		],
+		"description" : "Smart Korlantas is a SuperApp developed to consolidate all Korlantas POLRI services into a single, user-friendly application. Designed to streamline traffic-related services across Indonesia, the app provides a comprehensive platform for users to manage and access essential services efficiently. From traffic information to various Korlantas services, Smart Korlantas offers a seamless experience that simplifies complex processes and reduces the need for multiple platforms. Built using Flutter, this mobile solution is optimized to deliver smooth performance tailored to Indonesia’s specific needs."
+	} ,
 	{
 		"id": "sikebal",
 		"name" : "SiKebal",
