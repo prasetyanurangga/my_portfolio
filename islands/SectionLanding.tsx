@@ -27,7 +27,7 @@ export default function SectionLanding() {
             Hi <span class={tw`animate-wiggle`}>👋</span>, I'm Angga
           </span>
         </h1>
-        <span class={tw`text-small mt-3`}>a Mobile & Front End Developer</span>
+        <span class={tw`text-small mt-3`}>a Mobile & Web Developer</span>
 
         <svg
           onClick={executeScroll}
