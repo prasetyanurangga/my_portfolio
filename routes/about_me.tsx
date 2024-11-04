@@ -21,7 +21,7 @@ export default function AboutMe() {
     { name: "PHP", value: "80", color: "#000000" },
     { name: "SQL", value: "80", color: "#000000" },
     { name: "Next JS", value: "50", color: "#000000" },
-    { name: "React Nativ", value: "60", color: "#000000" },
+    { name: "React Native", value: "40", color: "#000000" },
   ];
 
   return (
@@ -52,6 +52,13 @@ export default function AboutMe() {
                 target="_blank"
               >
                 Download Resume
+              </a>
+              <a
+                class={tw`mt-4 lg:ml-2 inline-flex transition ease-in-out duration-100 cursor-pointer justify-center text-sm py-2 px-3 mt-4 font-bold text-black border(1 black) hover:(border(1 transparent) bg-black text-white)`}
+                href={profile.url_cv_ats}
+                target="_blank"
+              >
+                Download Resume ATS Friendly
               </a>
               <a
                 class={tw`mt-4 lg:ml-2 inline-flex transition ease-in-out duration-100 cursor-pointer justify-center text-sm py-2 px-3 mt-4 font-bold text-black border(1 black) hover:(border(1 transparent) bg-black text-white)`}
