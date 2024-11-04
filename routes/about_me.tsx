@@ -10,6 +10,7 @@ export default function AboutMe() {
       "I am a man who has an interest in programming.  My specialization includes quickly learning new skills and programming languages, problem solving, framework and design patterns.  so far the skills that I already have include Flutter, Javascript, Nuxt JS, Laravel, PHP, Postgresql, MySql, React Native.  I started studying Golang and React JS.  I am still enthusiastic about reaching a new programming language, framework, design pattern, and everything about programming",
     avatar_url: "https://avatars3.githubusercontent.com/u/35420062?v=4",
     url_cv: "/Resume - Angga Nur Prasetya.pdf",
+    url_cv_ats: "/Angga__Nur_Prasetya_-_Web_&_Mobile_Developer.pdf",
     url_github: "https://github.com/prasetyanurangga",
     url_linkedin: "https://www.linkedin.com/in/angga-nur-prasetya-4a1b3b1a0/",
   };
