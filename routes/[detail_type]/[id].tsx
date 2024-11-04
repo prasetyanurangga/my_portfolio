@@ -124,7 +124,7 @@ export default function Detail({
           <p class={tw` break-word text-md font-normal text-black my-5`}>
             {data.description}
           </p>
-          {data.client.type_client == "fulltime" && (
+          {data.contribution.length > 0 && (
             <div class={tw`flex flex-col my-5 w-full`}>
               <span class={tw`text-sm font-bold text-black w-full mb-1`}>
                 My Contributions

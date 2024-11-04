@@ -15,7 +15,14 @@ export default function ComponentTabImage({listImage}: tabImageProps) {
 
 	return (
 		<>
-				<div class={tw`flex flex-col-reverse`}>
+				<div class={tw`flex flex-col`}>
+
+<div class={tw`w-full aspect-w-1 aspect-h-1`}>
+  <div aria-labelledby="tabs-1-tab-1" role="tabpanel" tabindex="0">
+	<img src={listImage[indexImage]} class={tw`w-full h-full object-center object-cover sm:rounded-lg`} data-fresh-disable-lock/>
+  </div>
+
+</div>
           <div class={tw`mt-6 w-full max-w-2xl mx-auto sm:block lg:max-w-none`}>
             <div class={tw`grid lg:grid-cols-4 xs:grid-cols-3 gap-6`} aria-orientation="horizontal" role="tablist">
               {listImage.map((item, index) => 
@@ -29,13 +36,6 @@ export default function ComponentTabImage({listImage}: tabImageProps) {
 	              </button>
               )}
             </div>
-          </div>
-
-          <div class={tw`w-full aspect-w-1 aspect-h-1`}>
-            <div aria-labelledby="tabs-1-tab-1" role="tabpanel" tabindex="0">
-              <img src={listImage[indexImage]} class={tw`w-full h-full object-center object-cover sm:rounded-lg`} data-fresh-disable-lock/>
-            </div>
-
           </div>
         </div>
 		</>

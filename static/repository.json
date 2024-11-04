@@ -167,42 +167,56 @@
 			"Actively collaborated with other mobile developers, fostering an efficient development environment."
 		],
 		"description" : "Smart Korlantas is a SuperApp developed to consolidate all Korlantas POLRI services into a single, user-friendly application. Designed to streamline traffic-related services across Indonesia, the app provides a comprehensive platform for users to manage and access essential services efficiently. From traffic information to various Korlantas services, Smart Korlantas offers a seamless experience that simplifies complex processes and reduces the need for multiple platforms. Built using Flutter, this mobile solution is optimized to deliver smooth performance tailored to Indonesia’s specific needs."
-	} ,
+	} , 
+	
 	{
-		"id": "sikebal",
-		"name" : "SiKebal",
+		"id": "bungkus",
+		"name" : "Bungkus",
 		"client" : {
 			"type_client": "freelance",
-			"name": "Dinas Kesehatan Kab. Banjarnegara, Jawa Tengah",
-			"url" : "https://dinkesbna.banjarnegarakab.go.id"
+			"name": "Bungkus",
+			"url" : "https://bungkus.co.id"
 		},
 		"type" : "Web",
 		"language" : [{
-			"name" : "PHP",
+			"name" : "Next JS",
 			"color" : "#000000",
-			"value" : "50"
+			"value" : "40"
 		},{
-			"name" : "HTML",
-			"color" : "#000000",
-			"value" : "20"
-		},{
-			"name" : "CSS",
+			"name" : "Tailwind CSS",
 			"color" : "#000000",
 			"value" : "10"
 		},{
-			"name" : "JS (JQuery)",
+			"name" : "Golang (Gin)",
 			"color" : "#000000",
-			"value" : "20"
+			"value" : "40"
+		},{
+			"name" : "PostgreSQL",
+			"color" : "#000000",
+			"value" : "10"
 		}],
-		"date" : "2021-09-01",
-		"live_url" : "https://sikebal.com",
-		"thumb_photo": "/img/sikebal.png",
+		"date" : "2024-10-05",
+		"live_url" : "https://bungkus.co.id",
+		"thumb_photo": "/img/bungkus-1.png",
 		"photo" : [
-			"/img/sikebal.png",
-			"/img/sikebal_2.png"
+			"/img/bungkus-1.png",
+			"/img/bungkus-2.png",
+			"/img/bungkus-3.png"
 		],
-		"description" : ""
-	},
+		"contribution" : [
+			
+			"Designed and developed the front-end of the Bungkus app using Next.js, ensuring that client specifications were met with high-quality and scalable solutions.",
+			"Collaborated closely with the client to gather detailed project requirements, providing technical insights to enhance functionality and user experience.",
+			"Built a responsive and user-friendly web application that leverages modern design principles, ensuring an intuitive user experience that meets the needs of dropshipping sellers.",
+			"Implemented the back-end functionality using Golang, ensuring robust performance, efficient data handling, and seamless integration with the front-end.",
+			"Managed the server setup and configuration, preparing the web server for deployment and optimizing it for performance and security.",
+			"Handled domain configuration to facilitate seamless access to the application, enhancing user experience from the outset.",
+			"Maintained clear and consistent communication with the client throughout the project, ensuring alignment with project goals and deliverables.",
+			"Provided ongoing support for bug fixes and error resolution for four months after project handover, continuously implementing updates and enhancements based on client feedback and user testing to ensure the application remained effective and user-centric."
+
+		],
+		"description" : "Bungkus is an app designed for managing goods and transactions within a dropshipping business. This application features transaction management capabilities that streamline the process from the dropshipper seller to the warehouse and ultimately to the customer. Bungkus facilitates dropshipping sellers by simplifying their operations, eliminating the need for repackaging and shipping products directly to customers. By bridging the gaps between sellers, warehouses, and customers, the app enhances the efficiency of the dropshipping process. Additionally, Bungkus assists sellers in managing the inventory they store in the warehouse. The concept for this app was inspired by Crewdible."
+	}  ,
 	{
 		"id": "pwni",
 		"name" : "Portal Peduli WNI (PWNi)",
@@ -233,7 +247,14 @@
 			"/img/pwni.png",
 			"/img/pwni-1.png"
 		],
-		"description" : "Portal Pelayanan dan Pelindungan WNI di Luar Negeri (PEDULI WNI) merupakan sistem yang memfasilitasi pendataan WNI di Luar Negeri melalui fitur lapor diri, serta memudahkan WNI untuk mengajukan layanan baik secara online, maupun booking online untuk datang langsung ke perwakilan, serta memudahkan WNI untuk mengajukan pengaduan secara mandiri langsung melalui aplikasi. Pada project ini saya bertugas sebagai Frontend Developer dan Backend Developer. Tugas saya antara mengatasi bug, menambah fitur, dan meningkatkan UI/UX."
+		"contribution" : [
+			"Developed and maintained the PEDULI WNI portal using web technologies to support Indonesian citizens abroad in accessing essential services.",
+			"Collaborated closely with Quality Control (QC) and client teams to identify, verify, and resolve reported bugs, enhancing the platform's stability and reliability.",
+			"Added new features and menus as requested by clients, ensuring the application aligns with user needs and improves overall functionality.",
+			"Actively participated in the full development lifecycle, from planning and design to deployment, contributing to both front-end and back-end aspects of the project.",
+			"Provided continuous support for the live application, monitoring performance and promptly addressing issues to maintain optimal user experience."
+		],
+		"description" : "PEDULI WNI is a service and protection portal designed for Indonesian citizens (WNI) residing abroad, managed by the Ministry of Foreign Affairs (Kemenlu). The platform facilitates WNI data collection through a 'lapor diri' feature, making it easier for citizens to request various services, either online or by booking appointments for in-person visits at Indonesian consulates. The portal also allows WNI to submit complaints independently through the application."
 	} ,
 	{
 		"id": "komcad",
@@ -257,7 +278,13 @@
 			"/img/komcad.png",
 			"/img/komcad-1.png"
 		],
-		"description" : "Web Komcad merupakan website untuk proses rekrutmen personel Komcad (Komponen Cadangan) oleh Kementrian Pertahanan. Pada project ini saya bertugas sebagai Frontend Developer. Tugas saya antara mengatasi bug, menambah fitur, dan meningkatkan UI/UX."
+		"contribution" : [
+			"Developed and maintained the front-end of the Web Komcad recruitment website using Nuxt.js to create a responsive and user-friendly interface.",
+			"Collaborated with cross-functional teams to address and resolve bugs reported by the QA team, ensuring the stability and reliability of the website.",
+			"Implemented new features and enhancements to improve user experience and meet project specifications, focusing on intuitive navigation and accessibility.",
+			"Provided ongoing support for the live website, monitoring performance and resolving issues to ensure optimal operation and user satisfaction."
+		],
+		"description" : "Web Komcad is a recruitment website designed for the selection process of Komcad (Komponen Cadangan) personnel by the Ministry of Defense. This platform streamlines the recruitment procedure, providing a user-friendly interface for applicants to submit their information and track their application status. The website incorporates features that enhance the recruitment experience for both candidates and administrators, ensuring efficient management of applications and effective communication throughout the selection process."
 	} ,
 	
 	{
@@ -287,7 +314,15 @@
 			"/img/tandhur-2.png",
 			"/img/tandhur-3.png"
 		],
-		"description" : "Tandhur adalah sistem pengelolaan sektor pertanian berbasis web. Fitur utama tandhur adalah untuk mendata Petani, jenis tanaman, lokasi lahan petani, luas lahan pertanian, perhitungan finansial pertanian dan estimasi hasil panen."
+		"contribution" : [
+			"Designed and developed the front-end of the Tandhur web-based agricultural management system using Next.js and Tailwind CSS, ensuring that client specifications were met with high-quality and scalable solutions.",
+			"Collaborated closely with the client to gather detailed project requirements, providing technical insights to enhance functionality and user experience.",
+			"Built a responsive and user-friendly web application, leveraging Tailwind CSS for a modern and efficient design that ensures an intuitive user experience.",
+			"Managed the front-end development lifecycle, from initial design concepts through to final deployment and ongoing support post-launch.",
+			"Maintained clear and consistent communication with the client throughout the project, ensuring alignment with project goals and deliverables.",
+			"Continuously implemented updates and enhancements based on client feedback and user testing, ensuring the application remained effective and user-centric."
+		],
+		"description" : "Tandhur is a web-based agricultural management system designed to streamline the management of agricultural sectors. The platform's primary features include the registration of farmers, categorization of crop types, tracking of farmland locations, assessment of land area, financial calculations related to agriculture, and harvest yield estimations. By providing an organized system for managing agricultural data, Tandhur aims to enhance productivity and support farmers in making informed decisions."
 	}  
 
 ]
