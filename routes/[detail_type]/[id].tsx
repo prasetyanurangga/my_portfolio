@@ -13,6 +13,7 @@ interface ResponPortfolioProject {
   description: string;
   date: string;
   languages: any;
+  contribution: any;
   listImage: any;
   github_url: string;
   live_url: string;
@@ -42,6 +43,7 @@ export const handler: Handlers<ResponPortfolioProject | null> = {
         name: dataOpenSource.name,
         type: dataOpenSource.type,
         description: dataResponGithub.description,
+        contribution: [],
         date: dataResponGithub.updated_at,
         languages: dataOpenSource.language || [],
         listImage: [dataOpenSource.main_photo],
@@ -69,6 +71,7 @@ export const handler: Handlers<ResponPortfolioProject | null> = {
         name: dataProfessionalProject.name,
         type: dataProfessionalProject.type,
         description: dataProfessionalProject.description,
+        contribution: dataProfessionalProject.contribution || [],
         date: dataProfessionalProject.date,
         date_start: dataProfessionalProject.date_start,
         date_end: dataProfessionalProject.date_end,
@@ -121,6 +124,22 @@ export default function Detail({
           <p class={tw` break-word text-md font-normal text-black my-5`}>
             {data.description}
           </p>
+          {data.client.type_client == "fulltime" && (
+            <div class={tw`flex flex-col my-5 w-full`}>
+              <span class={tw`text-sm font-bold text-black w-full mb-1`}>
+                My Contributions
+              </span>
+
+              <div class={tw` break-word text-md font-normal text-black`}>
+                <ul>
+                  {data.contribution.map((contribution) => 
+                    <li> <span class={tw`text-md mr-1`}>◦</span>{contribution}</li>
+                  )}
+                  
+                </ul>
+              </div>
+            </div>
+          )}
           {data.client && (
             <>
               <div class={tw`my-5 flex flex-col`}>
@@ -165,18 +184,19 @@ export default function Detail({
             </>
           )}
 
+
           <div class={tw`flex flex-col my-5 w-full`}>
-            <span class={tw`text-md font-normal text-black w-full mb-1`}>
+            <span class={tw`text-sm font-bold text-black w-full mb-1`}>
               Languages & framework
             </span>
 
             {data.languages.map((itemLanguages) => (
               <div class={tw`my-1`}>
                 <div class={tw`flex flex-row justify-between items-center`}>
-                  <span class={tw`text-sm font-bold text-black`}>
+                  <span class={tw`text-sm font-normal text-black`}>
                     {itemLanguages.name}
                   </span>
-                  <span class={tw`text-sm font-normal text-black`}>
+                  <span class={tw`text-sm font-bold text-black`}>
                     {itemLanguages.value}%
                   </span>
                 </div>

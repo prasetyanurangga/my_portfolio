@@ -158,6 +158,14 @@
 			"/img/smartkorlantas-1.png",
 			"/img/smartkorlantas-2.png"
 		],
+		"contribution" : [
+			"Structured the project layout, establishing organized folders and code architecture.",
+			"Developed the foundational setup for state management using BLoC.",
+			"Integrated Dio for reliable HTTP client functionality.",
+			"Configured application routing and dependency injection, enhancing scalability and maintainability.",
+			"Created a custom code generator that automates the creation of pages and modules, accelerating development and simplifying feature addition for the team.",
+			"Actively collaborated with other mobile developers, fostering an efficient development environment."
+		],
 		"description" : "Smart Korlantas is a SuperApp developed to consolidate all Korlantas POLRI services into a single, user-friendly application. Designed to streamline traffic-related services across Indonesia, the app provides a comprehensive platform for users to manage and access essential services efficiently. From traffic information to various Korlantas services, Smart Korlantas offers a seamless experience that simplifies complex processes and reduces the need for multiple platforms. Built using Flutter, this mobile solution is optimized to deliver smooth performance tailored to Indonesia’s specific needs."
 	} ,
 	{
