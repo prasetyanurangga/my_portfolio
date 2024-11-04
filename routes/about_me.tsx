@@ -7,7 +7,7 @@ export default function AboutMe() {
   const profile = {
     nama: "Angga Nur Prasetya",
     description:
-      "I am a man who has an interest in programming.  My specialization includes quickly learning new skills and programming languages, problem solving, framework and design patterns.  so far the skills that I already have include Flutter, Javascript, Nuxt JS, Laravel, PHP, Postgresql, MySql, React Native.  I started studying Golang and React JS.  I am still enthusiastic about reaching a new programming language, framework, design pattern, and everything about programming",
+      "As a highly skilled Web and Mobile Developer with over 5 years of hands-on experience, I have a deep expertise in building and maintaining robust mobile and web applications. Proficient in modern technologies such as Nuxt.js, Next.js, Flutter, and PostgreSQL, I consistently deliver high-quality solutions tailored to project requirements. At PT Traspac Makmur Sejahtera, my current role involves not only fixing bugs reported by QC teams but also actively participating in the end-to-end development of web and mobile projects. My flexibility in handling both front-end and back-end development has enabled me to provide comprehensive support across multiple projects. I am passionate about innovation, problem-solving, and driving improvements that enhance user experience and project performance. I thrive in collaborative environments, consistently pushing for scalable, efficient, and user-focused solutions.",
     avatar_url: "https://avatars3.githubusercontent.com/u/35420062?v=4",
     url_cv: "/Resume - Angga Nur Prasetya.pdf",
     url_cv_ats: "/Angga__Nur_Prasetya_-_Web_&_Mobile_Developer.pdf",
