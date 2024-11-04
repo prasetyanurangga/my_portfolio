@@ -27,13 +27,13 @@ export default function Index({ data }: PageProps<ResponPortfolioProject>) {
         itemsGallery={data.professional_project}
         typeProject="professional_project"
         title="Professional Project"
-        subTitle="some professional projects that I have made. There are some projects that I have worked as full-time and freelance developer, but as these projects are not publicly accessible, I have not listed them.but I can tell you about my role and contribution to those projects"
+        subTitle="Here are some of my professional works. For other projects that are not publicly accessible, I'm available to discuss my role and contributions upon request."
       />
       <SectionGallery
         itemsGallery={data.open_project}
         typeProject="open_project"
         title="Weekend Project"
-        subTitle="some open projects that I have made"
+        subTitle="A collection of open-source projects I've crafted in my spare time."
       />
     </MainLayout>
   );
